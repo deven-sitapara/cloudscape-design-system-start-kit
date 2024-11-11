@@ -1,5 +1,5 @@
 "use client";
-import DashboardLayout from "@/app/ui/dashboard-layout";
+import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 import {
   Container,
   ContentLayout,

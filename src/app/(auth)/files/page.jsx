@@ -1,5 +1,5 @@
 "use client";
-import DashboardLayout from "@/app/ui/dashboard-layout";
+import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 import Cards from "@cloudscape-design/components/cards";
 import Box from "@cloudscape-design/components/box";
 import SpaceBetween from "@cloudscape-design/components/space-between";
@@ -175,15 +175,7 @@ const BodyContent = ({ data }) => {
         </Box>
       }
       filter={<TextFilter filteringPlaceholder="Find resources" />}
-      header={
-        <Header
-        // counter={
-        //   selectedItems?.length ? "(" + selectedItems.length + "/10)" : "(10)"
-        // }
-        >
-          Files
-        </Header>
-      }
+      header={<Header variant="h1">Files</Header>}
       pagination={<Pagination currentPageIndex={1} pagesCount={2} />}
       preferences={
         <CollectionPreferences

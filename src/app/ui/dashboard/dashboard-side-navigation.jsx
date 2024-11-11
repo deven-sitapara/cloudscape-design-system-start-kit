@@ -2,6 +2,11 @@ import { SideNavigation } from "@cloudscape-design/components";
 import { usePathname } from "next/navigation";
 
 export function DashboardSideNavigation() {
+  const navHeader = {
+    text: "Dashboard",
+    href: "/dashboard",
+  };
+
   const navItems = [
     {
       type: "section",
@@ -9,11 +14,6 @@ export function DashboardSideNavigation() {
       defaultExpanded: true,
 
       items: [
-        {
-          type: "link",
-          text: "Dashboard",
-          href: "/dashboard",
-        },
         { type: "link", text: "Files", href: "/files" },
         { type: "link", text: "TSR", href: "/tsr" },
         { type: "link", text: "Documents", href: "/documents" },
@@ -37,7 +37,11 @@ export function DashboardSideNavigation() {
 
   return (
     <>
-      <SideNavigation items={navItems} activeHref={pathname} />
+      <SideNavigation
+        header={navHeader}
+        items={navItems}
+        activeHref={pathname}
+      />
     </>
   );
 }
