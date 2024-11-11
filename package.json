@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "npx npm@latest install --legacy-peer-deps",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm install --legacy-peer-deps && next build",
     "start": "next start",
     "lint": "next lint"
   },
