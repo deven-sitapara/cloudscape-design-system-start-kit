@@ -16,6 +16,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
+  "overrides": {
+    "@cloudscape-design/chat-components": {
+      "react": "18.2.0"
+    }
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
