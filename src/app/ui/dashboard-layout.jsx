@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import {
   AppLayout,
+  Box,
   BreadcrumbGroup,
   Container,
+  ExpandableSection,
   Flashbar,
   Header,
   Input,
@@ -12,6 +14,7 @@ import {
 } from "@cloudscape-design/components";
 import { I18nProvider } from "@cloudscape-design/components/i18n";
 import messages from "@cloudscape-design/components/i18n/messages/all.en";
+import { DashboardSideNavigation } from "./dashboard-side-navigation";
 
 const LOCALE = "en";
 
@@ -36,29 +39,6 @@ function DashboardLayout({ BodyContent, BreadcrumbItems }) {
   ]);
 
   const [searchValue, setSearchValue] = useState("");
-
-  const navItems = [
-    {
-      type: "section",
-      text: "Modules",
-      items: [
-        { type: "link", text: "Files", href: "#/page1" },
-        { type: "link", text: "TSR", href: "#/page2" },
-        { type: "link", text: "Documents", href: "#/page3" },
-        { type: "link", text: "BT", href: "#/page4" },
-        { type: "link", text: "Extra Work", href: "#/page4" },
-      ],
-    },
-    {
-      type: "section",
-      text: "Settings",
-      items: [
-        { type: "link", text: "Company", href: "#/page4" },
-        { type: "link", text: "Branch", href: "#/page4" },
-        { type: "link", text: "Users", href: "#/page4" },
-      ],
-    },
-  ];
 
   return (
     <>
@@ -155,9 +135,10 @@ function DashboardLayout({ BodyContent, BreadcrumbItems }) {
         />
 
         <AppLayout
+          contentType="cards"
           breadcrumbs={<BreadcrumbGroup items={BreadcrumbItems} />}
           toolsHide
-          navigation={<SideNavigation activeHref="#/pages" items={navItems} />}
+          navigation={<DashboardSideNavigation />}
           notifications={<Flashbar items={items} />}
           // toolsOpen={true}
           // tools={<HelpPanel header={<h2>Overview</h2>}>Help content</HelpPanel>}

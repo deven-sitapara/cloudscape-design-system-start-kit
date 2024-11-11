@@ -55,7 +55,11 @@ function ServiceOverviewWidget() {
         {
           label: "RAJKOT",
           value: (
-            <Link variant="awsui-value-large" href="#" ariaLabel="files (126)">
+            <Link
+              variant="awsui-value-large"
+              href="/files"
+              ariaLabel="files (126)"
+            >
               126
             </Link>
           ),
@@ -65,7 +69,7 @@ function ServiceOverviewWidget() {
           value: (
             <Link
               variant="awsui-value-large"
-              href="#"
+              href="/files"
               ariaLabel="JAMNAGAR (51)"
             >
               51
@@ -75,7 +79,11 @@ function ServiceOverviewWidget() {
         {
           label: "JUNAGADH",
           value: (
-            <Link variant="awsui-value-large" href="#" ariaLabel="files (126)">
+            <Link
+              variant="awsui-value-large"
+              href="/files"
+              ariaLabel="files (126)"
+            >
               126
             </Link>
           ),
@@ -85,7 +93,7 @@ function ServiceOverviewWidget() {
           value: (
             <Link
               variant="awsui-value-large"
-              href="#"
+              href="/files"
               ariaLabel="JAMNAGAR (51)"
             >
               51
@@ -95,7 +103,11 @@ function ServiceOverviewWidget() {
         {
           label: "AHMEDABAD",
           value: (
-            <Link variant="awsui-value-large" href="#" ariaLabel="files (126)">
+            <Link
+              variant="awsui-value-large"
+              href="/files"
+              ariaLabel="files (126)"
+            >
               126
             </Link>
           ),
@@ -105,7 +117,7 @@ function ServiceOverviewWidget() {
           value: (
             <Link
               variant="awsui-value-large"
-              href="#"
+              href="/files"
               ariaLabel="JAMNAGAR (51)"
             >
               51
