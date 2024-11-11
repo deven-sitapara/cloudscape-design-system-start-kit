@@ -4,6 +4,12 @@ import { createContext, useState } from "react";
 const LoadingContext = createContext();
 const LoagingContext = createContext();
 
+let _isUserLogin = false;
+if (typeof window !== "undefined") {
+  // Safe to use localStorage
+  _isUserLogin = localStorage.getItem("isLoggedIn");
+}
+
 function LoadingProvider({ children, ...props }) {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -12,11 +18,6 @@ function LoadingProvider({ children, ...props }) {
       {children}
     </LoadingContext.Provider>
   );
-}
-let _isUserLogin = false;
-if (typeof window !== "undefined") {
-  // Safe to use localStorage
-  _isUserLogin = localStorage.getItem("isLoggedIn");
 }
 
 // console.log({ _isUserLogin });
