@@ -13,10 +13,13 @@ function LoadingProvider({ children, ...props }) {
     </LoadingContext.Provider>
   );
 }
+let _isUserLogin = false;
+if (typeof window !== "undefined") {
+  // Safe to use localStorage
+  _isUserLogin = localStorage.getItem("isLoggedIn");
+}
 
-const _isUserLogin = localStorage.getItem("isLoggedIn");
-
-console.log({ _isUserLogin });
+// console.log({ _isUserLogin });
 
 function AuthProvider({ children, ...props }) {
   const [isUserLogin, setUserLogin] = useState(_isUserLogin);
