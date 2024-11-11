@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
-export default () => {
+export default function LoginForm() {
   // use Context LoginContext to set setIsLoading
   const { isLoading, setIsLoading } = useContext(LoadingContext);
   const { isUserLogin, setUserLogin } = useContext(LoagingContext);
@@ -63,4 +63,4 @@ export default () => {
       </SpaceBetween>
     </>
   );
-};
+}

@@ -3,7 +3,7 @@ import LoadingBar from "@cloudscape-design/chat-components/loading-bar";
 import LiveRegion from "@cloudscape-design/components/live-region";
 import Box from "@cloudscape-design/components/box";
 
-export default () => {
+export default function LoadingEffect() {
   return (
     <div>
       <LiveRegion>
@@ -12,4 +12,4 @@ export default () => {
       </LiveRegion>
     </div>
   );
-};
+}
