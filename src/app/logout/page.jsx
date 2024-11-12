@@ -2,11 +2,11 @@
 
 import { useContext, useEffect } from "react";
 
-import { LoagingContext } from "../providers";
+import { UserLoginContext } from "../providers";
 import { useRouter } from "next/navigation";
 
 export default function LogoutPage() {
-  const { isUserLogin, setUserLogin } = useContext(LoagingContext);
+  const { isUserLogin, setUserLogin } = useContext(UserLoginContext);
   const router = useRouter();
 
   useEffect(() => {

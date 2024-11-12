@@ -1,4 +1,4 @@
-import { AuthProvider, LoadingProvider } from "../providers";
+import { AuthProvider, LayoutProvider, LoadingProvider } from "../providers";
 import "../globals.css";
 import localFont from "next/font/local";
 
@@ -20,13 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head></head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={"auth-layout-body"} suppressHydrationWarning>
         <AuthProvider>
-          <LoadingProvider>{children}</LoadingProvider>
+          <LayoutProvider>
+            <LoadingProvider>{children}</LoadingProvider>
+          </LayoutProvider>
         </AuthProvider>
       </body>
     </html>

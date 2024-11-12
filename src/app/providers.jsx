@@ -1,8 +1,10 @@
 "use client";
 import { createContext, useState } from "react";
+import DashboardLayout from "./ui/dashboard/dashboard-layout";
 
 const LoadingContext = createContext();
-const LoagingContext = createContext();
+const UserLoginContext = createContext();
+const LayoutContext = createContext();
 
 let _isUserLogin = false;
 if (typeof window !== "undefined") {
@@ -26,10 +28,27 @@ function AuthProvider({ children, ...props }) {
   const [isUserLogin, setUserLogin] = useState(_isUserLogin);
 
   return (
-    <LoagingContext.Provider value={{ isUserLogin, setUserLogin }}>
+    <UserLoginContext.Provider value={{ isUserLogin, setUserLogin }}>
       {children}
-    </LoagingContext.Provider>
+    </UserLoginContext.Provider>
   );
 }
 
-export { AuthProvider, LoadingProvider, LoadingContext, LoagingContext };
+function LayoutProvider({ children, ...props }) {
+  // Add layout-related state and functions here
+  const [layout, setLayout] = useState({});
+
+  return (
+    <LayoutContext.Provider value={{ layout, setLayout }}>
+      {children}
+    </LayoutContext.Provider>
+  );
+}
+
+export {
+  AuthProvider,
+  LoadingProvider,
+  LayoutProvider,
+  LoadingContext,
+  UserLoginContext,
+};

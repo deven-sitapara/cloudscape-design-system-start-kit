@@ -1,4 +1,4 @@
-import { LoadingContext, LoagingContext } from "@/app/providers";
+import { LoadingContext, UserLoginContext } from "@/app/providers";
 import {
   Button,
   FormField,
@@ -11,7 +11,7 @@ import { useContext, useEffect, useState } from "react";
 export default function LoginForm() {
   // use Context LoginContext to set setIsLoading
   const { isLoading, setIsLoading } = useContext(LoadingContext);
-  const { isUserLogin, setUserLogin } = useContext(LoagingContext);
+  const { isUserLogin, setUserLogin } = useContext(UserLoginContext);
   const router = useRouter();
 
   useEffect(() => {

@@ -18,7 +18,7 @@ import { DashboardSideNavigation } from "./dashboard-side-navigation";
 
 const LOCALE = "en";
 
-function DashboardLayout({ BodyContent, BreadcrumbItems }) {
+function DashboardLayout({  BodyContent, BreadcrumbItems }) {
   const [items, setItems] = useState([
     {
       type: "info",
