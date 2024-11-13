@@ -3,11 +3,11 @@ import Image from "next/image";
 import LoadingEffect from "./ui/loading-effect";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
-import { LoagingContext } from "./providers";
+import { UserLoginContext } from "./providers";
 
 export default function Home() {
   const router = useRouter();
-  const { isUserLogin } = useContext(LoagingContext);
+  const { isUserLogin } = useContext(UserLoginContext);
 
   useEffect(() => {
     if (isUserLogin) {

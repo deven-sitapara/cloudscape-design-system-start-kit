@@ -6,7 +6,8 @@
     "company": "HOME FIRST",
     "date": "26-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Deven Sitapara"
+    "created_by": "Deven Sitapara",
+    "type": "tsr"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "company": "ADANI HOUSING FINANCE",
     "date": "25-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Rajesh Patel"
+    "created_by": "Rajesh Patel",
+    "type": "doc"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "company": "MUTHOOT HOMEFIN",
     "date": "24-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Amit Mehta"
+    "created_by": "Amit Mehta",
+    "type": "bt"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "company": "TATA CAPITAL",
     "date": "23-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Suresh Bhatt"
+    "created_by": "Suresh Bhatt",
+    "type": "ext"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "company": "INCRED FINANCE",
     "date": "22-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Harsh Shah"
+    "created_by": "Harsh Shah",
+    "type": "doc"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "company": "PNB HOUSING",
     "date": "21-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Nidhi Desai"
+    "created_by": "Nidhi Desai",
+    "type": "tsr"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "company": "WONDER HOME FINANCE",
     "date": "20-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Jatin Patel"
+    "created_by": "Jatin Patel",
+    "type": "bt"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "company": "ADANI HOUSING FINANCE",
     "date": "19-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Meera Joshi"
+    "created_by": "Meera Joshi",
+    "type": "ext"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "company": "TATA CAPITAL",
     "date": "18-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Parth Dodiya"
+    "created_by": "Parth Dodiya",
+    "type": "doc"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "company": "HDFC BANK",
     "date": "17-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Reema Singh"
+    "created_by": "Reema Singh",
+    "type": "tsr"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "company": "TATA CAPITAL HF",
     "date": "16-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Manish Parmar"
+    "created_by": "Manish Parmar",
+    "type": "ext"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "company": "INCRED FINANCE",
     "date": "15-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Ravi Mehta"
+    "created_by": "Ravi Mehta",
+    "type": "bt"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "company": "ADITYA BIRLA HOUSING",
     "date": "14-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Ankita Shah"
+    "created_by": "Ankita Shah",
+    "type": "doc"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "company": "HOME FIRST",
     "date": "13-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Mitesh Vora"
+    "created_by": "Mitesh Vora",
+    "type": "tsr"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "company": "TATA CAPITAL",
     "date": "12-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Kishan Adroja"
+    "created_by": "Kishan Adroja",
+    "type": "ext"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "company": "MUTHOOT HOMEFIN",
     "date": "11-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Raj Kumar"
+    "created_by": "Raj Kumar",
+    "type": "bt"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "company": "ADANI HOUSING FINANCE",
     "date": "10-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Nilesh Patel"
+    "created_by": "Nilesh Patel",
+    "type": "doc"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "company": "PNB HOUSING",
     "date": "09-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Sonal Shah"
+    "created_by": "Sonal Shah",
+    "type": "tsr"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "company": "HDFC BANK",
     "date": "08-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Dhruv Patel"
+    "created_by": "Dhruv Patel",
+    "type": "ext"
   },
   {
     "id": 20,
@@ -177,6 +196,7 @@
     "company": "TATA CAPITAL",
     "date": "07-10-2024",
     "updated_at": "27-10-2024",
-    "created_by": "Rahul Verma"
+    "created_by": "Rahul Verma",
+    "type": "bt"
   }
 ]

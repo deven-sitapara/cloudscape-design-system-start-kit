@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "AYE FINANCE RAJKOT",
+    "fee": { "tsr": 10, "vr": 20, "search": 30 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 2,
+    "name": "AAA MORBI JAMANGAR",
+    "fee": { "tsr": 100, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 3,
+    "name": "AADHAR HOUSING FINANCE JUNAGADH",
+    "fee": { "tsr": 1500, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 4,
+    "name": "AADHAR HOUSING FINANCE LAP DEPARTMENT RAJKOT",
+    "fee": { "tsr": 2000, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 5,
+    "name": "AADHAR HOUSING FINANCE RAJKOT",
+    "fee": { "tsr": 1500, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 6,
+    "name": "AADHAR HOUSING FINANCE VERAVAL",
+    "fee": { "tsr": 1500, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 7,
+    "name": "AADHAR HOUSING JAMNAGAR",
+    "fee": { "tsr": 1300, "vr": 0, "search": 200 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 8,
+    "name": "AADITYA BIRLA JETPUR",
+    "fee": { "tsr": 0, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 9,
+    "name": "AADITYA BIRLA PRIME JUNAGADH",
+    "fee": { "tsr": 0, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 10,
+    "name": "ADANI AHEMDABAD",
+    "fee": { "tsr": 0, "vr": 0, "search": 0 },
+    "emails": ["aye@gmail.com", "rajkot@gmail.com"],
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  }
+]

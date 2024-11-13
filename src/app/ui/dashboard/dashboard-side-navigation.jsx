@@ -24,10 +24,10 @@ export function DashboardSideNavigation() {
     {
       type: "section",
       text: "Settings",
-      defaultExpanded: false,
+      defaultExpanded: true,
       items: [
-        { type: "link", text: "Company", href: "/settings/company" },
-        { type: "link", text: "Branch", href: "/settings/branch" },
+        { type: "link", text: "Company", href: "/settings/companies" },
+        { type: "link", text: "Branch", href: "/settings/branches" },
         { type: "link", text: "Users", href: "/settings/users" },
       ],
     },
@@ -38,6 +38,8 @@ export function DashboardSideNavigation() {
   return (
     <>
       <SideNavigation
+
+        
         header={navHeader}
         items={navItems}
         activeHref={pathname}

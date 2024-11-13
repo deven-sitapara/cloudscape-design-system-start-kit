@@ -7,6 +7,7 @@ import {
   KeyValuePairs,
   Link,
 } from "@cloudscape-design/components";
+import { memo } from "react";
 
 export default function DashboardPage() {
   const breadcrumbItems = [
@@ -16,13 +17,13 @@ export default function DashboardPage() {
 
   return (
     <DashboardLayout
-      BodyContent={BodyContent}
+      BodyContent={() => <BodyContent />}
       BreadcrumbItems={breadcrumbItems}
     ></DashboardLayout>
   );
 }
 
-function BodyContent(props) {
+const BodyContent = memo(function BodyContent(props) {
   return (
     <>
       <ContentLayout
@@ -45,7 +46,7 @@ function BodyContent(props) {
       </ContentLayout>
     </>
   );
-}
+});
 
 function ServiceOverviewWidget() {
   return (

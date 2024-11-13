@@ -22,8 +22,6 @@ function LoadingProvider({ children, ...props }) {
   );
 }
 
-// console.log({ _isUserLogin });
-
 function AuthProvider({ children, ...props }) {
   const [isUserLogin, setUserLogin] = useState(_isUserLogin);
 

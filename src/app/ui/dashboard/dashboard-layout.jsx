@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import {
   AppLayout,
   Box,
@@ -18,7 +18,7 @@ import { DashboardSideNavigation } from "./dashboard-side-navigation";
 
 const LOCALE = "en";
 
-function DashboardLayout({  BodyContent, BreadcrumbItems }) {
+function DashboardLayout({ BodyContent, BreadcrumbItems }) {
   const [items, setItems] = useState([
     {
       type: "info",
@@ -45,10 +45,10 @@ function DashboardLayout({  BodyContent, BreadcrumbItems }) {
       <I18nProvider locale={LOCALE} messages={[messages]}>
         <TopNavigation
           identity={{
-            href: "#",
+            href: "/dashboard",
             title: "CM Law Firm",
             logo: {
-              src: "./assets/images/icon-logo.png",
+              src: "/assets/images/icon-logo.png",
               alt: "CM Law Firm",
             },
           }}
@@ -64,11 +64,59 @@ function DashboardLayout({  BodyContent, BreadcrumbItems }) {
           }
           utilities={[
             {
-              type: "button",
-              text: "Link",
-              href: "https://example.com/",
-              external: true,
-              externalIconAriaLabel: " (opens in a new tab)",
+              type: "menu-dropdown",
+              text: "File",
+              ariaLabel: "File",
+
+              items: [
+                {
+                  id: "tsr",
+                  text: "TSR",
+                  href: "/files?type=tsr",
+                  ariaLabel: "TSR File",
+                },
+                {
+                  id: "document",
+                  text: "Document",
+                  ariaLabel: "Document File",
+                  href: "/files?type=document",
+                },
+                {
+                  id: "bt",
+                  text: "BT",
+                  ariaLabel: "BT File",
+                  href: "/files?type=bt",
+                },
+                {
+                  id: "extra-work",
+                  text: "Extra Work",
+                  ariaLabel: "Extra Work File",
+                  href: "/files?type=extra-work",
+                },
+              ],
+            },
+            {
+              type: "menu-dropdown",
+              text: "Settings",
+              ariaLabel: "File",
+
+              items: [
+                {
+                  id: "companies",
+                  text: "Companies",
+                  href: "/settings/companies",
+                },
+                {
+                  id: "branches",
+                  text: "Branches",
+                  href: "/settings/branches",
+                },
+                {
+                  id: "users",
+                  text: "Users",
+                  href: "/settings/users",
+                },
+              ],
             },
             {
               type: "button",
@@ -85,12 +133,12 @@ function DashboardLayout({  BodyContent, BreadcrumbItems }) {
               title: "Settings",
               items: [
                 {
-                  id: "settings-org",
-                  text: "Organizational settings",
+                  id: "smtp",
+                  text: "SMTP",
                 },
                 {
-                  id: "settings-project",
-                  text: "Project settings",
+                  id: "other",
+                  text: "Other",
                 },
               ],
             },
@@ -110,7 +158,7 @@ function DashboardLayout({  BodyContent, BreadcrumbItems }) {
                     {
                       id: "documentation",
                       text: "Documentation",
-                      href: "#",
+                      href: "https://google.com",
                       external: true,
                       externalIconAriaLabel: " (opens in new tab)",
                     },
@@ -118,7 +166,7 @@ function DashboardLayout({  BodyContent, BreadcrumbItems }) {
                     {
                       id: "feedback",
                       text: "Feedback",
-                      href: "#",
+                      href: "https://google.com",
                       external: true,
                       externalIconAriaLabel: " (opens in new tab)",
                     },

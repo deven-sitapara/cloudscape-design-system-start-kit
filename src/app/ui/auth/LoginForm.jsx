@@ -44,15 +44,15 @@ export default function LoginForm() {
           onClick={() => {
             setIsLoading(true);
 
-            setTimeout(() => {
-              setIsLoading(false);
-              // set login to browser storage
+            // setTimeout(() => {
+            // setIsLoading(false);
+            // set login to browser storage
 
-              localStorage.setItem("isLoggedIn", true);
-              localStorage.setItem("username", "deven@sitapara.com");
+            localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("username", "deven@sitapara.com");
 
-              setUserLogin(true);
-            }, 2000);
+            setUserLogin(true);
+            //}, 1000);
           }}
           loading={isLoading}
           variant="primary"

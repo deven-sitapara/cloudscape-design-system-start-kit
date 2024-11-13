@@ -1,20 +1,20 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "cloudscape-nextjs-starter-kit",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "preinstall": "npx npm@latest install --legacy-peer-deps",
     "dev": "next dev",
-    "build": "npm install --legacy-peer-deps && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@cloudscape-design/chat-components": "^1.0.17",
     "@cloudscape-design/components": "^3.0.822",
-    "next": "15.0.3",
+    "next": "13.4.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "zustand": "^5.0.1"
   },
   "overrides": {
     "@cloudscape-design/chat-components": {

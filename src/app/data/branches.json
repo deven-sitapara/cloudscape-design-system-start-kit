@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "branch": "RAJKOT",
+    "contact_person": "SAGAR SHEKHALIYA",
+    "phone": "9925594050",
+    "email": "chiraglawfirm@gmail.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 2,
+    "branch": "JAMNAGAR",
+    "contact_person": "VIMAL TANK",
+    "phone": "9925554690",
+    "email": "cmmjamnagar@gmail.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 3,
+    "branch": "JUNAGADH",
+    "contact_person": "JAYESH KHESHVANI",
+    "phone": "9904403236",
+    "email": "j.khesvani@gmail.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 4,
+    "branch": "MORBI",
+    "contact_person": "RAVI DOBARIYA",
+    "phone": "9925554670",
+    "email": "cmmmorbi@gmail.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 5,
+    "branch": "AHMEDABAD",
+    "contact_person": "SANDIP HALA",
+    "phone": "7016542946",
+    "email": "chiragmanani@outlook.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 6,
+    "branch": "BHAVNAGAR",
+    "contact_person": "PINJAL",
+    "phone": "9925596020",
+    "email": "cmbhavnagar@outlook.com",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  }
+]
