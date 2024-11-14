@@ -2,11 +2,11 @@
 
 import { Container, Header, Box, Grid } from "@cloudscape-design/components";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import LoadingEffect from "../ui/loading-effect";
 import LoginForm from "../ui/auth/LoginForm";
-import { LoadingContext, LoagingContext } from "../providers";
+import { LoadingContext } from "../providers";
 
 export default function LoginPage() {
   const { isLoading, setIsLoading } = useContext(LoadingContext);

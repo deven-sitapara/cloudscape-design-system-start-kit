@@ -3,19 +3,31 @@ import {
   Badge,
   Box,
   Button,
-  CollectionPreferences,
-  ColumnLayout,
-  Grid,
+  CollectionPreferences, Grid,
   Modal,
   SpaceBetween,
+  Table,
+  Header,
+  TextFilter,
+  Pagination
 } from "@cloudscape-design/components";
+import { capitalizeFirstLetter } from "@/lib/helper";
+
 import CreateForm from "./form";
-import { useEditModalStore } from "./page";
+import { create } from "zustand";
+import { useEffect, useState } from "react";
+
+export const useEditModalStore = create((set) => ({
+  visible: false,
+  item: null,
+  showModal: (item) => set({ visible: true, item }),
+  hideModal: () => set({ visible: false, item: null }),
+}));
 
 export const TableDefinition = {
   moduleName: "company",
   modulePluralName: "companies",
-  header: (item) => <Header item={item}></Header>,
+  // header: (item) => <Header item={item}></Header>,
   columnDefinitions: [
     {
       id: "name",
@@ -46,7 +58,7 @@ export const TableDefinition = {
           </Box>
         );
       },
-      sortingField: "contact_person",
+      sortingField: "fee",
     },
 
     {
@@ -56,7 +68,7 @@ export const TableDefinition = {
       sortingField: "date",
     },
   ],
-  visibleColumns: ["branch", "company", "date"],
+  visibleColumns: ["name", "fee", "date"],
   preferences: () => (
     <div>
       <CollectionPreferences
@@ -65,7 +77,7 @@ export const TableDefinition = {
         cancelLabel="Cancel"
         preferences={{
           pageSize: 6,
-          visibleContent: CardDefinition.visibleColumns,
+          visibleContent: TableDefinition.visibleColumns,
         }}
         pageSizePreference={{
           title: "Page size",
@@ -80,8 +92,8 @@ export const TableDefinition = {
             {
               label: "Display column data",
               options: [
-                { id: "branch", label: "branch" },
-                { id: "company", label: "company" },
+                { id: "name", label: "name" },
+                { id: "fee", label: "fee" },
                 { id: "date", label: "date" },
               ],
             },
@@ -91,56 +103,113 @@ export const TableDefinition = {
     </div>
   ),
   empty: () => (
-    <Box margin={{ vertical: "xs" }} textAlign="center" color="inherit">
-      <SpaceBetween size="m">
-        <b>No resources</b>
-        <Button>Create resource</Button>
-      </SpaceBetween>
-    </Box>
+    <div>
+      <Box margin={{ vertical: "xs" }} textAlign="center" color="inherit">
+        <SpaceBetween size="m">
+          <b>No resources</b>
+          <Button>Create resource</Button>
+        </SpaceBetween>
+      </Box>
+    </div>
   ),
 };
 
 export const EditModal = () => {
   const { visible, hideModal, item } = useEditModalStore();
 
-  const title = "Create new Branch";
+  const title = "Create new Company";
 
   return (
-    <Modal
-      onDismiss={hideModal}
-      visible={visible}
-      size="large"
-      header={title}
-      footer={
-        <Box float="right">
-          <SpaceBetween direction="horizontal" size="xs">
-            <Button variant="link" onClick={hideModal}>
-              Cancel
-            </Button>
-            <Button variant="primary">Ok</Button>
-          </SpaceBetween>
-        </Box>
-      }
-    >
-      <CreateForm item={item}></CreateForm>
-    </Modal>
+    <div>
+      <Modal
+        onDismiss={hideModal}
+        visible={visible}
+        size="large"
+        header={title}
+        footer={
+          <Box float="right">
+            <SpaceBetween direction="horizontal" size="xs">
+              <Button variant="link" onClick={hideModal}>
+                Cancel
+              </Button>
+              <Button variant="primary">Ok</Button>
+            </SpaceBetween>
+          </Box>
+        }
+      >
+        <CreateForm item={item}></CreateForm>
+      </Modal>
+    </div>
   );
 };
 
-export function Header({ item }) {
+// export function Header({ item }) {
+//   return (
+//     <Header
+//       counter={`(${item?.length})`}
+//       actions={
+//         <SpaceBetween direction="horizontal" size="xs">
+//           <Button onClick={() => useEditModalStore.getState().showModal(true)}>
+//             Add new company
+//           </Button>
+//           {/* <Button>Delete</Button> */}
+//         </SpaceBetween>
+//       }
+//     >
+//       Branches
+//     </Header>
+//   );
+// }
+
+//wrap with BodyContent Component
+export function BodyContent({ companyJsonData }) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Clean initial render
+  }
+
   return (
-    <Header
-      counter={`(${item?.length})`}
-      actions={
-        <SpaceBetween direction="horizontal" size="xs">
-          <Button onClick={() => useEditModalStore.getState().showModal(true)}>
-            Add new branch
-          </Button>
-          {/* <Button>Delete</Button> */}
-        </SpaceBetween>
-      }
-    >
-      Branches
-    </Header>
+    isClient &&
+    companyJsonData?.length > 0 && (
+      <div>
+        <Table
+          sortingColumn={[]}
+          columnDefinitions={TableDefinition.columnDefinitions}
+          items={companyJsonData}
+          //   selectedItems={selectedItems}
+          //   onSelectionChange={({ detail }) => setSelectedItems(detail.selectedItems)}
+          header={
+            <Header
+              counter={`(${companyJsonData?.length})`}
+              actions={
+                <SpaceBetween direction="horizontal" size="xs">
+                  <Button
+                    onClick={() => useEditModalStore.getState().showModal(true)}
+                  >
+                    Add new {TableDefinition.moduleName}
+                  </Button>
+                  {/* <Button>Delete</Button> */}
+                </SpaceBetween>
+              }
+            >
+              {capitalizeFirstLetter(TableDefinition.modulePluralName)}
+            </Header>
+          }
+          variant="embedded"
+          filter={<TextFilter filteringPlaceholder="Find branches" />}
+          pagination={
+            companyJsonData.length > 10 && (
+              <Pagination currentPageIndex={1} pagesCount={1} />
+            )
+          }
+        />
+        <EditModal></EditModal>
+      </div>
+    )
   );
 }

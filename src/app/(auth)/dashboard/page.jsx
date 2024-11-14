@@ -1,5 +1,4 @@
 "use client";
-import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 import {
   Container,
   ContentLayout,
@@ -7,7 +6,7 @@ import {
   KeyValuePairs,
   Link,
 } from "@cloudscape-design/components";
-import { memo } from "react";
+import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 
 export default function DashboardPage() {
   const breadcrumbItems = [
@@ -17,13 +16,13 @@ export default function DashboardPage() {
 
   return (
     <DashboardLayout
-      BodyContent={() => <BodyContent />}
+      BodyContent={<BodyContent />}
       BreadcrumbItems={breadcrumbItems}
     ></DashboardLayout>
   );
 }
 
-const BodyContent = memo(function BodyContent(props) {
+function BodyContent() {
   return (
     <>
       <ContentLayout
@@ -46,7 +45,7 @@ const BodyContent = memo(function BodyContent(props) {
       </ContentLayout>
     </>
   );
-});
+}
 
 function ServiceOverviewWidget() {
   return (

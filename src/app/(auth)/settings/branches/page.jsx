@@ -30,7 +30,7 @@ export default function BranchesPage() {
 
   return (
     <DashboardLayout
-      BodyContent={() => <BodyContent branchesJsonData={branchesJsonData} />}
+      BodyContent={<BodyContent branchesJsonData={branchesJsonData} />}
       BreadcrumbItems={breadcrumbItems}
     ></DashboardLayout>
   );

@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import LoadingEffect from "./ui/loading-effect";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 import { UserLoginContext } from "./providers";

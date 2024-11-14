@@ -35,7 +35,7 @@ export default function UsersPage() {
 
   return (
     <DashboardLayout
-      BodyContent={() => <BodyContent usersJsonData={usersJsonData} />}
+      BodyContent={<BodyContent usersJsonData={usersJsonData} />}
       BreadcrumbItems={breadcrumbItems}
     ></DashboardLayout>
   );

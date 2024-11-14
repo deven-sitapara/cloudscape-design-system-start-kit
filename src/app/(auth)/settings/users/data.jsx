@@ -10,7 +10,13 @@ import {
   SpaceBetween,
 } from "@cloudscape-design/components";
 import CreateForm from "./form";
-import { useEditModalStore } from "./page";
+
+export const useEditModalStore = create((set) => ({
+  visible: false,
+  item: null,
+  showModal: (item) => set({ visible: true, item }),
+  hideModal: () => set({ visible: false, item: null }),
+}));
 
 export const TableDefinition = {
   moduleName: "user",

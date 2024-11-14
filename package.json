@@ -11,7 +11,8 @@
   "dependencies": {
     "@cloudscape-design/chat-components": "^1.0.17",
     "@cloudscape-design/components": "^3.0.822",
-    "next": "13.4.0",
+    "next": "^15.0.3",
+    "nextjs": "^0.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zustand": "^5.0.1"

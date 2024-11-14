@@ -18,11 +18,10 @@ export const metadata = {
   description: "SaaS  for law firms",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={"auth-layout-body"} suppressHydrationWarning>
+      <body className="login-body-class a" suppressHydrationWarning>
         <AuthProvider>
           <LayoutProvider>
             <LoadingProvider>{children}</LoadingProvider>

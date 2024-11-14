@@ -1,15 +1,11 @@
-import React, { memo, useState } from "react";
+"use client";
+import { useState } from "react";
 import {
   AppLayout,
-  Box,
   BreadcrumbGroup,
-  Container,
-  ExpandableSection,
   Flashbar,
-  Header,
   Input,
   Link,
-  SideNavigation,
   TopNavigation,
 } from "@cloudscape-design/components";
 import { I18nProvider } from "@cloudscape-design/components/i18n";
@@ -190,7 +186,7 @@ function DashboardLayout({ BodyContent, BreadcrumbItems }) {
           notifications={<Flashbar items={items} />}
           // toolsOpen={true}
           // tools={<HelpPanel header={<h2>Overview</h2>}>Help content</HelpPanel>}
-          content={<BodyContent />}
+          content={BodyContent}
           // splitPanel={<SplitPanel header="Split panel header"></SplitPanel>}
         />
       </I18nProvider>

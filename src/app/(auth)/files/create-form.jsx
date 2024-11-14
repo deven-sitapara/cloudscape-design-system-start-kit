@@ -1,18 +1,8 @@
 import * as React from "react";
-import Form from "@cloudscape-design/components/form";
 import SpaceBetween from "@cloudscape-design/components/space-between";
-import Button from "@cloudscape-design/components/button";
-import Container from "@cloudscape-design/components/container";
-import Header from "@cloudscape-design/components/header";
 import FormField from "@cloudscape-design/components/form-field";
 import Input from "@cloudscape-design/components/input";
-import {
-  ColumnLayout,
-  DatePicker,
-  Grid,
-  Select,
-  Textarea,
-} from "@cloudscape-design/components";
+import { Grid, Select } from "@cloudscape-design/components";
 
 export default function CreateForm({ item }) {
   const [date, setDate] = React.useState("2024-11-13");
@@ -38,17 +28,6 @@ export default function CreateForm({ item }) {
               placeholder=""
               onChange={() => {}}
             />
-            {/* <DatePicker
-              selectedDate={date}
-              onChange={({ detail }) => setDate(detail.value)}
-              value={date}
-              disabled={true}
-              openCalendarAriaLabel={(selectedDate) =>
-                "Choose certificate expiry date" +
-                (selectedDate ? `, selected date is ${selectedDate}` : "")
-              }
-              placeholder="YYYY/MM/DD"
-            /> */}
           </FormField>
 
           <FormField label="Branch">
