@@ -4,6 +4,20 @@
 
 This is NextJs starter kit for cloudscape design system.
 
+# Screensshots
+
+### Login
+
+![Dashboard Image](./doc/login.png)
+
+### Dashboard
+
+![Dashboard Image](./doc/dashboard.png)
+
+### Files Module
+
+![Dashboard Image](./doc/file-module.png)
+
 ## Installation
 
 ```bash
