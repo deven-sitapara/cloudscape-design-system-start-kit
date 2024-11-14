@@ -15,10 +15,10 @@ export function DashboardSideNavigation() {
 
       items: [
         { type: "link", text: "Files", href: "/files" },
-        { type: "link", text: "TSR", href: "/tsr" },
-        { type: "link", text: "Documents", href: "/documents" },
-        { type: "link", text: "BT", href: "/bt" },
-        { type: "link", text: "Extra Work", href: "/extrawork" },
+        { type: "link", text: "TSR", href: "/files?type=tsr" },
+        { type: "link", text: "Documents", href: "/files?type=documents" },
+        { type: "link", text: "BT", href: "/files?type=bt" },
+        { type: "link", text: "Extra Work", href: "/files?type=extrawork" },
       ],
     },
     {
@@ -38,8 +38,6 @@ export function DashboardSideNavigation() {
   return (
     <>
       <SideNavigation
-
-        
         header={navHeader}
         items={navItems}
         activeHref={pathname}

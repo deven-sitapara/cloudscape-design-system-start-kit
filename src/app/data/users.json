@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "BHAVNAGAR",
+    "email": "cmbhavnagar@outlook.com",
+    "password": "keep-it-blank",
+    "branch": "BHAVNAGAR",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 2,
+    "name": "Test",
+    "email": "bhutrohit@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 3,
+    "name": "Test",
+    "email": "test@test.com",
+    "password": "12345",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 4,
+    "name": "AHMEDABAD",
+    "email": "chiragmanani@outlook.com",
+    "password": "keep-it-blank",
+    "branch": "AHMEDABAD",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 5,
+    "name": "Karan",
+    "email": "sonofchauhan028@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 6,
+    "name": "Aryan",
+    "email": "aryandabhi400@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 7,
+    "name": "Sandip",
+    "email": "sandiphala93@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 8,
+    "name": "MORBI",
+    "email": "cmmmorbi@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "MORBI",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 9,
+    "name": "JUNAGADH",
+    "email": "cmmjunagadh@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "JUNAGADH",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 10,
+    "name": "JAMNAGAR",
+    "email": "cmmjamnagar@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "JAMNAGAR",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 11,
+    "name": "RAJKOT",
+    "email": "chiraglawfirm@gmail.com",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  },
+  {
+    "id": 12,
+    "name": "Super User",
+    "email": "superuser@chiraglf.in",
+    "password": "keep-it-blank",
+    "branch": "RAJKOT",
+    "date": "26-10-2024",
+    "updated_at": "27-10-2024",
+    "created_by": "Deven Sitapara"
+  }
+]

@@ -14,11 +14,12 @@ import {
   ButtonDropdown,
   ColumnLayout,
 } from "@cloudscape-design/components";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import fileJsonData from "../../data/file.json";
 import { CardContent, CardDefinition, EditModal } from "./card-data";
 import { create } from "zustand";
 import { capitalizeFirstLetter } from "@/lib/helper";
+import { useSearchParams } from "next/navigation";
 
 export const useEditModalStore = create((set) => ({
   visible: false,
@@ -45,6 +46,10 @@ export default function FilesPage({ breadcrumbItems }) {
 
 const BodyContent = memo(function BodyContent({ fileData }) {
   // empty test fileData = [];
+  const searchParams = useSearchParams();
+
+  const type = searchParams.get("type");
+  
 
   return (
     <div>
@@ -102,7 +107,8 @@ const BodyContent = memo(function BodyContent({ fileData }) {
               }
               variant="h1"
             >
-              Files
+              {/* add type from get param here */}
+              Files ({type})
             </Header>
           </div>
         }
