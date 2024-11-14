@@ -49,7 +49,6 @@ const BodyContent = memo(function BodyContent({ fileData }) {
   const searchParams = useSearchParams();
 
   const type = searchParams.get("type");
-  
 
   return (
     <div>
@@ -108,7 +107,7 @@ const BodyContent = memo(function BodyContent({ fileData }) {
               variant="h1"
             >
               {/* add type from get param here */}
-              Files ({type})
+              Files {type && "(" + capitalizeFirstLetter(type) + ")"}
             </Header>
           </div>
         }
