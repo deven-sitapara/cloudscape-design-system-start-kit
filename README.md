@@ -4,17 +4,19 @@
 
 This is NextJs starter kit for cloudscape design system.
 
+[Demo](https://cloudscape-design-system-start-kit.vercel.app/login/)
+
 # Screensshots
 
-### Login
+### [Login](https://cloudscape-design-system-start-kit.vercel.app/login/)
 
 ![Dashboard Image](./doc/login.png)
 
-### Dashboard
+### [Dashboard](https://cloudscape-design-system-start-kit.vercel.app/dashboard/)
 
 ![Dashboard Image](./doc/dashboard.png)
 
-### Files Module
+### [File Module](https://cloudscape-design-system-start-kit.vercel.app/files/)
 
 ![Dashboard Image](./doc/file-module.png)
 
