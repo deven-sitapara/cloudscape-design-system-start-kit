@@ -17,8 +17,7 @@ export default function LoginPage() {
       <div
         className="flex items-center justify-center h-screen bg-white"
         style={{
-          background:
-            'url("assets/images/login-background.jpg") center center no-repeat',
+          backgroundColor: "#90D5FF",
         }}
       >
         <Grid gridDefinition={[{ colspan: 12, offset: 0 }]}>
