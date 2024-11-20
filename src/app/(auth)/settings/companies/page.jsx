@@ -1,6 +1,7 @@
 "use server";
 import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
-import companyJsonData from "../../../data/companies.json";
+import companyJsonData from "@data/companies.json";
+
 import { BodyContent } from "./data";
 
 export default async function CompaniesPage() {

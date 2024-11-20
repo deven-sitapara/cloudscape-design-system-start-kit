@@ -11,16 +11,8 @@ import {
 } from "@cloudscape-design/components";
 import { memo, useState } from "react";
 import usersJsonData from "../../../data/users.json";
-import { EditModal, TableDefinition } from "./data";
-import { create } from "zustand";
+import { EditModal, TableDefinition, useEditModalStore } from "./data";
 import { capitalizeFirstLetter } from "@/lib/helper";
-
-export const useEditModalStore = create((set) => ({
-  visible: false,
-  item: null,
-  showModal: (item) => set({ visible: true, item }),
-  hideModal: () => set({ visible: false, item: null }),
-}));
 
 const moduleName = "company";
 
