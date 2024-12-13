@@ -1,12 +1,16 @@
 "use client";
+import { DashboardSideNavigation } from "@/app/ui/dashboard/dashboard-side-navigation";
 import {
+  AppLayout,
+  BreadcrumbGroup,
   Container,
   ContentLayout,
   Header,
   KeyValuePairs,
   Link,
 } from "@cloudscape-design/components";
-import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
+import AppLayoutComponent from "../components/AppLayoutComponent";
+// import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 
 export default function DashboardPage() {
   const breadcrumbItems = [
@@ -15,10 +19,10 @@ export default function DashboardPage() {
   ];
 
   return (
-    <DashboardLayout
+    <AppLayoutComponent
+      breadcrumbs={breadcrumbItems}
       BodyContent={<BodyContent />}
-      BreadcrumbItems={breadcrumbItems}
-    ></DashboardLayout>
+    />
   );
 }
 

@@ -1,3 +1,4 @@
+"use client";
 import { SideNavigation } from "@cloudscape-design/components";
 import { usePathname } from "next/navigation";
 

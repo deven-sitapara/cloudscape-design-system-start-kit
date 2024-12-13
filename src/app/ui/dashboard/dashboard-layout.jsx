@@ -14,26 +14,7 @@ import { DashboardSideNavigation } from "./dashboard-side-navigation";
 
 const LOCALE = "en";
 
-function DashboardLayout({ BodyContent, BreadcrumbItems }) {
-  const [items, setItems] = useState([
-    {
-      type: "info",
-      dismissible: true,
-      dismissLabel: "Dismiss message",
-      onDismiss: () => setItems([]),
-      content: (
-        <>
-          This is an info flash message. It contains{" "}
-          <Link color="inverted" href="#">
-            a link to another page
-          </Link>
-          .
-        </>
-      ),
-      id: "message_1",
-    },
-  ]);
-
+function DashboardLayout({ children }) {
   const [searchValue, setSearchValue] = useState("");
 
   return (
@@ -177,18 +158,7 @@ function DashboardLayout({ BodyContent, BreadcrumbItems }) {
             },
           ]}
         />
-
-        <AppLayout
-          contentType="cards"
-          breadcrumbs={<BreadcrumbGroup items={BreadcrumbItems} />}
-          toolsHide
-          navigation={<DashboardSideNavigation />}
-          notifications={<Flashbar items={items} />}
-          // toolsOpen={true}
-          // tools={<HelpPanel header={<h2>Overview</h2>}>Help content</HelpPanel>}
-          content={BodyContent}
-          // splitPanel={<SplitPanel header="Split panel header"></SplitPanel>}
-        />
+        {children}
       </I18nProvider>
     </>
   );

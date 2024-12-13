@@ -13,6 +13,7 @@ import { memo, useState } from "react";
 import branchesJsonData from "../../../data/branches.json";
 import { EditModal, TableDefinition } from "./data";
 import { create } from "zustand";
+import AppLayoutComponent from "../../components/AppLayoutComponent";
 
 export const useEditModalStore = create((set) => ({
   visible: false,
@@ -29,10 +30,10 @@ export default function BranchesPage() {
   ];
 
   return (
-    <DashboardLayout
+    <AppLayoutComponent
       BodyContent={<BodyContent branchesJsonData={branchesJsonData} />}
-      BreadcrumbItems={breadcrumbItems}
-    ></DashboardLayout>
+      breadcrumbItems={breadcrumbItems}
+    ></AppLayoutComponent>
   );
 }
 

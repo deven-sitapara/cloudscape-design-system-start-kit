@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 import LoadingEffect from "../ui/loading-effect";
 import LoginForm from "../ui/auth/LoginForm";
-import { LoadingContext } from "../providers";
+import { LoadingContext } from "../(auth)/providers";
 
 export default function LoginPage() {
   const { isLoading, setIsLoading } = useContext(LoadingContext);

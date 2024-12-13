@@ -3,6 +3,7 @@ import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
 import companyJsonData from "@data/companies.json";
 
 import { BodyContent } from "./data";
+import AppLayoutComponent from "../../components/AppLayoutComponent";
 
 export default async function CompaniesPage() {
   const breadcrumbItems = [
@@ -14,9 +15,9 @@ export default async function CompaniesPage() {
   // add naming constants singular plural without state
 
   return (
-    <DashboardLayout
+    <AppLayoutComponent
       BodyContent={<BodyContent companyJsonData={companyJsonData} />}
-      BreadcrumbItems={breadcrumbItems}
-    ></DashboardLayout>
+      breadcrumbItems={breadcrumbItems}
+    ></AppLayoutComponent>
   );
 }

@@ -8,11 +8,13 @@ import {
   SpaceBetween,
   TextFilter,
   Pagination,
+  AppLayout,
 } from "@cloudscape-design/components";
 import { memo, useState } from "react";
 import usersJsonData from "../../../data/users.json";
 import { EditModal, TableDefinition, useEditModalStore } from "./data";
 import { capitalizeFirstLetter } from "@/lib/helper";
+import AppLayoutComponent from "../../components/AppLayoutComponent";
 
 const moduleName = "company";
 
@@ -26,10 +28,10 @@ export default function UsersPage() {
   // add naming constants singular plural without state
 
   return (
-    <DashboardLayout
+    <AppLayoutComponent
       BodyContent={<BodyContent usersJsonData={usersJsonData} />}
-      BreadcrumbItems={breadcrumbItems}
-    ></DashboardLayout>
+      breadcrumbItems={breadcrumbItems}
+    ></AppLayoutComponent>
   );
 }
 

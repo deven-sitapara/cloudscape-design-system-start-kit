@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import SpaceBetween from "@cloudscape-design/components/space-between";
 import FormField from "@cloudscape-design/components/form-field";
@@ -9,6 +10,10 @@ export default function CreateForm({ item }) {
   const [branch, setBranch] = React.useState({
     label: "Rajkot",
     value: "Rajkot",
+  });
+  const [moduleType, setSetmoduleType] = React.useState({
+    label: "TSR",
+    value: "TSR",
   });
   const [company, setCompany] = React.useState({
     label: "",
@@ -96,7 +101,25 @@ export default function CreateForm({ item }) {
         </Grid>
         {/* </ColumnLayout> */}
 
-        <Grid gridDefinition={[{ colspan: 6 }, { colspan: 6 }]}>
+        <Grid gridDefinition={[{ colspan: 4 }, { colspan: 4 }, { colspan: 4 }]}>
+          <div>
+            <FormField label="Module Type">
+              <Select
+                selectedOption={moduleType}
+                onChange={({ detail }) =>
+                  setSetmoduleType(detail.selectedOption)
+                }
+                options={[
+                  { label: "TSR", value: "TSR" },
+                  { label: "Document", value: "Document" },
+                  { label: "VR", value: "VR" },
+                  { label: "BT", value: "BT" },
+                  { label: "Search", value: "Search" },
+                  { label: "Extra Work", value: "Extra Work" },
+                ]}
+              />
+            </FormField>
+          </div>
           <div>
             <FormField label="Company Referance">
               <Input
@@ -108,7 +131,7 @@ export default function CreateForm({ item }) {
             </FormField>
           </div>
           <div>
-            <FormField label="Proposed Owner / Borrower / Applicant">
+            <FormField label="Owner / Borrower / Applicant">
               <Input
                 value={"JAYABEN NANJIBHAI RATHOD"}
                 ariaRequired={true}
@@ -135,7 +158,134 @@ export default function CreateForm({ item }) {
             onChange={() => {}}
           />
         </FormField>
+
+        {moduleType.value === "BT" && <BTModule />}
+        {moduleType.value === "Extra Work" && <ExtraWorkModule />}
       </SpaceBetween>
     </form>
+  );
+}
+
+function BTModule() {
+  return (
+    <div>
+      <Grid gridDefinition={[{ colspan: 4 }, { colspan: 4 }, { colspan: 4 }]}>
+        <div>
+          <FormField label="Customer Contact">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder="1234567890"
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="Email">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder="user@example.com"
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="Work Details">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+      </Grid>
+      <Grid gridDefinition={[{ colspan: 4 }, { colspan: 4 }, { colspan: 4 }]}>
+        <div>
+          <FormField label="Total Amount">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="Received Amount">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div></div>
+      </Grid>
+    </div>
+  );
+}
+
+function ExtraWorkModule() {
+  return (
+    <div>
+      <Grid gridDefinition={[{ colspan: 4 }, { colspan: 4 }, { colspan: 4 }]}>
+        <div>
+          <FormField label="Customer Email">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder="1234567890"
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="Cheque No">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder="user@example.com"
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="Date">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+      </Grid>
+      <Grid gridDefinition={[{ colspan: 4 }, { colspan: 4 }, { colspan: 4 }]}>
+        <div>
+          <FormField label="Amount">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div>
+          <FormField label="BT Bank Name">
+            <Input
+              value={""}
+              ariaRequired={true}
+              placeholder=""
+              onChange={() => {}}
+            />
+          </FormField>
+        </div>
+        <div></div>
+      </Grid>
+    </div>
   );
 }

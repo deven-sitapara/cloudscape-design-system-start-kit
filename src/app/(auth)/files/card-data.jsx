@@ -233,7 +233,7 @@ export const EditModal = () => {
 
   const title = item?.id
     ? `Edit # ${item.id} - ${item.title}`
-    : "Create new " + " (" + item?.type.toUpperCase() + ") File";
+    : "Create new File";
 
   return (
     <Modal
@@ -257,7 +257,7 @@ export const EditModal = () => {
   );
 };
 
-export function BodyContent({ fileData }) {
+export function BodyCardContent({ fileData }) {
   // empty test fileData = [];
   const searchParams = useSearchParams();
 

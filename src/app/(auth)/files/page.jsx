@@ -1,23 +1,44 @@
-"use server";
-import DashboardLayout from "@/app/ui/dashboard/dashboard-layout";
-
 import fileData from "../../data/file.json";
-import { BodyContent } from "./card-data";
+import { BodyContent } from "./table-data";
 import { Suspense } from "react";
+import Link from "next/link";
+import AppLayoutComponent from "../components/AppLayoutComponent";
 
 export default async function FilesPage() {
   const breadcrumbItems = [
     { text: "Home", href: "/dashboard" },
     { text: "Files", href: "#" },
   ];
+
+  const items = [
+    {
+      type: "info",
+      dismissible: true,
+      dismissLabel: "Dismiss message",
+      content: (
+        <>
+          This is an info flash message. It contains{" "}
+          <Link color="inverted" href="#">
+            a link to another page
+          </Link>
+          .
+        </>
+      ),
+      id: "message_1",
+    },
+  ];
+
   return (
-    <DashboardLayout
-      BodyContent={
-        <Suspense>
-          <BodyContent fileData={fileData} />
-        </Suspense>
-      }
-      BreadcrumbItems={breadcrumbItems}
-    ></DashboardLayout>
+    <AppLayoutComponent
+      breadcrumbs={breadcrumbItems}
+      BodyContent={<ReturnContent />}
+    />
+  );
+}
+function ReturnContent() {
+  return (
+    <Suspense>
+      <BodyContent file={fileData} />
+    </Suspense>
   );
 }
